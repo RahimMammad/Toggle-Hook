@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useToggle from './hooks/useToggle';
 import Navbar from './components/Navbar';
+import Count from './components/Count';
 
 const App = () => {
     const {value, toggle} = useToggle(false);
   return (
+    <>
     <div>
       <button onClick={toggle}>Toggle</button>
       <div>
@@ -12,7 +14,9 @@ const App = () => {
             value ? <Navbar /> : ""
         }
       </div>
-    </div>
+    </div><br /><br />
+    <Count />
+    </>
   )
 }
 
